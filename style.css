@@ -51,14 +51,9 @@ box-sizing: border-box;
     margin-top: -485px;
     width: auto;
     float: right;
+    position: relative;
 }
-.search::after{
-    position: absolute;
-    height: 28px;
-    width: 28px;
-    border-radius: 50%;
-    background-image: url(images/search.png);
-}
+
 
 input{
     flex: 1;
@@ -76,7 +71,9 @@ button{
     font-size: 16px;
     cursor: pointer;
     border-radius: 40px;
-}
+}  
+  button:hover{background:rgb(17, 190, 17);}
+
 ul li{
     list-style: none;
     font-size: large;
@@ -106,12 +103,13 @@ ul li.checked::before{
     background-image: url(images/checked.png);
 
 }
+/* ul li edit{} */
 ul li span{
     position: absolute;
     right: 0;
     top: 5px;
     width: 40px;
-    height: 40px;
+    height: 40px; 
     font-size: 22px;
     color:#555;
     line-height:40px;
@@ -128,4 +126,14 @@ ul li span:hover{
 .todo-app::-webkit-scrollbar-thumb{
     background: #ff5945;
     border-radius: 30px;
+}
+#searchicon{
+    width: 25px;
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+}
+#searchicon:hover{
+    background: #f8f4efd2;
+    border-radius: 45%;
 }

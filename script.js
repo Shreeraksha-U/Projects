@@ -1,5 +1,7 @@
 const inputBox = document.getElementById("input-box");
 const listContainer = document.getElementById("list-container");
+const searchBox = document.getElementById("searchbox");
+
 function addTask(){
     if(inputBox.value === ''){
         alert("Enter your task!");
@@ -14,7 +16,7 @@ function addTask(){
     }
     inputBox.value=""; 
     saveData();
-}
+} 
 listContainer.addEventListener("click", function(e){
     if(e.target.tagName === "LI"){ 
         e.target.classList.toggle("checked");
@@ -34,3 +36,7 @@ function showTask(){
     listContainer.innerHTML=localStorage.getItem("data");
 }
 showTask();
+
+searchBox.addEventListener('keyup', (e) =>{
+    console.log(e.target.value);
+});
