@@ -14,7 +14,7 @@ box-sizing: border-box;
 }
 .todo-app{
     width: 100%;
-    max-width: 540px;
+    max-width: 640px;
     background: #fff;
     margin: 100px auto 20px;
     padding: 40px 30px 70px;
@@ -27,6 +27,7 @@ box-sizing: border-box;
     display: flex;
     align-items: center;
     margin-bottom: 20px ;
+
 } 
 .todo-app h2 img{
     width: 30px;
@@ -41,6 +42,13 @@ box-sizing: border-box;
     padding-left: 20px;
     margin-bottom: 25px;
 }
+.search-box{
+    flex-wrap: wrap;
+    position: sticky;
+    top:630px;
+    right: 50px; 
+}   
+    
 .search{
     display: flex;
     align-items: center;
@@ -54,13 +62,12 @@ box-sizing: border-box;
     position: relative;
 }
 
-
 input{
     flex: 1;
     border: none;
     outline: none;
     background: transparent;
-    padding: 10px; ;
+    padding: 10px; 
 }
 button{
     border: none;
