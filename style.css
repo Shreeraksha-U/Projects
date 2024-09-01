@@ -19,19 +19,35 @@ box-sizing: border-box;
     margin: 100px auto 20px;
     padding: 40px 30px 70px;
     border-radius: 10px;
-    height: 400px;     /* Fixed height and width (is needed to add scroll) that might cause overflow */
+    height: 500px;     /* Fixed height and width (is needed to add scroll) that might cause overflow */
     overflow-y: auto; /* overflow enables to add scroll use webkit scroll*/
 }
 .todo-app h2{
     color: #002765;
-    display: flex;
+    display: inline-flex;
     align-items: center;
-    margin-bottom: 20px ;
+    margin-bottom: 20px;
 
 } 
 .todo-app h2 img{
     width: 30px;
     margin-left:10px;
+}
+.score{
+    width: 150px;
+    height: 60px;
+    background-color: #0fa033;
+    border: 3px solid #4e085f;
+    transform: translateX(10px) translateY(-10px); /* Move 10px to the right */
+}
+.score::before {
+    content: '/';
+    font-size: 50px; /* Adjust size as needed */
+    color: white; /* Adjust color as needed */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center it */
 }
 .row{
     display: flex ;
@@ -42,12 +58,12 @@ box-sizing: border-box;
     padding-left: 20px;
     margin-bottom: 25px;
 }
-.search-box{
+/* .search-box{
     flex-wrap: wrap;
     position: sticky;
     top:630px;
     right: 50px; 
-}   
+}    */
     
 .search{
     display: flex;
