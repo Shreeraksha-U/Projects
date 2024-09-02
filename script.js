@@ -1,6 +1,5 @@
 const inputBox = document.getElementById("input-box");
 const listContainer = document.getElementById("list-container");
-const searchBox = document.getElementById("searchbox");
 
 function addTask(){
     if(inputBox.value === ''){
@@ -37,6 +36,36 @@ function showTask(){
 }
 showTask();
 
-searchBox.addEventListener('keyup', (e) =>{
-    console.log(e.target.value);
+
+const allUl = document.querySelectorAll('#list-container');
+const searchInput = document.querySelector('#searchid');
+
+searchInput.addEventListener('input', function(e) {
+    const searchStr = e.target.value.toLowerCase();
+
+    allUl.forEach(ul => {
+        const li_in_ul = ul.querySelectorAll('li');
+        const matchingItems = [];
+        const nonMatchingItems = [];
+        
+        li_in_ul.forEach(li => {
+            const text = li.innerText.toLowerCase();
+            
+            if (text.includes(searchStr)) {
+                matchingItems.push(li);  // Collect matching items
+            } else {
+                nonMatchingItems.push(li);  // Collect non-matching items
+            }
+        });
+        
+        // Clear the current list
+        ul.querySelectorAll('li').forEach(li => li.remove());
+
+        // Append matching items first
+        matchingItems.forEach(item => ul.appendChild(item));
+        
+        // Append non-matching items after
+        nonMatchingItems.forEach(item => ul.appendChild(item));
+    });
 });
+
