@@ -27,7 +27,6 @@ box-sizing: border-box;
     display: inline-flex;
     align-items: center;
     margin-bottom: 20px;
-
 } 
 .todo-app h2 img{
     width: 30px;
@@ -57,20 +56,6 @@ box-sizing: border-box;
     margin-bottom: 25px;
 }
 
-    
-.search{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background: #cecece;
-    border-radius: 30px;
-    padding-left: 60px;
-    margin-top: 50px;
-    width: auto;
-    float: right;
-    position: relative;
-}
-
 input{
     flex: 1;
     border: none;
@@ -83,7 +68,7 @@ button{
     outline: none;
     padding: 16px 50px;
     background: #ff5945;
-    color: #fff;
+    color: #f1e3e3;
     font-size: 16px;
     cursor: pointer;
     border-radius: 40px;
@@ -137,19 +122,17 @@ ul li span:hover{
 }
 .todo-app::-webkit-scrollbar{
     width: 8px;
-    
 }
 .todo-app::-webkit-scrollbar-thumb{
     background: #ff5945;
     border-radius: 30px;
 }
-#searchicon{
-    width: 25px;
-    position: absolute;
-    right: 10px;
-    cursor: pointer;
-}
-#searchicon:hover{
-    background: #f8f4efd2;
-    border-radius: 45%;
+
+.search {
+    margin-top: -440px; 
+    margin-left: 330px;
+    border-radius: 20px;
+    background: #cfcfc7;
+    width:250px; 
+    padding: 10px;  
 }
